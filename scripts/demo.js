@@ -36,6 +36,7 @@ var inventory = require('./data/inventory').rows;
 // map of patient ID to invoices, invoices are in order of creation and should be
 // paid from the bottom up
 var invoices = {};
+var dailyCashMovement = [];
 
 var registeredPatients = [];
 var PROJECT_CODE = 'HSP';
@@ -45,16 +46,14 @@ var PROJECT_CODE = 'HSP';
 
 var count = 0;
 
-// queue.add(login)
-  // .then(function () {
-
-buildDay();
-
-// });
+queue.add(login)
+  .then(function () {
+    buildDay();
+  });
+// transferCash();
 // queue.add(registerPatient);
 // queue.add(invoicePatient);
 // queue.add(registerPatient);
-
 
 var SUNDAY = 0;
 var MONDAY = 1;
@@ -94,9 +93,12 @@ function buildDay() {
   /**
    * Calculate Tasks
    */
-  var numberOfPatients = _.random(1, 3);
-  var numberOfInvoices = _.random(1, 6);
-  var numberOfPayments = _.random(1, 3);
+  var numberOfPatients = _.random(1, 1);
+  var numberOfInvoices = _.random(1, 1);
+  var numberOfPayments = _.random(1, 1);
+  // var numberOfPatients = _.random(1, 1);
+  // var numberOfInvoices = _.random(1, 1);
+  // var numberOfPayments = _.random(1, 1);
 
   // ensure number of payments can be met
   var maxInvoices = availableInvoices();
@@ -125,18 +127,6 @@ function buildDay() {
   populateTaskList(dailyTasks, invoicePatient, numberOfInvoices);
   populateTaskList(dailyTasks, payInvoice, numberOfPayments);
 
-  /**
-   * Calculate Time Interval Sets
-   */
-  // var numberOfActions = numberOfPatients + numberOfInvoices;
-  var numberOfActions = numberOfPatients + numberOfInvoices + numberOfPayments;
-
-  // minute units
-  var workDay = 480;
-
-  var minimumIncrement = 20;
-  var maximumIncrement = Math.round(480 / numberOfActions);
-
   dailyTasks = _.shuffle(dailyTasks);
 
   // ensure a patient is registered first thing in the morning always
@@ -145,6 +135,23 @@ function buildDay() {
     _.pullAt(dailyTasks, [registerIndex]);
     dailyTasks.unshift(registerPatient);
   }
+
+  // tranfer aux -> primary every day
+  if (numberOfPayments) {
+    dailyTasks.push(transferCash);
+  }
+
+  /**
+   * Calculate Time Interval Sets
+   */
+  // var numberOfActions = numberOfPatients + numberOfInvoices;
+  var numberOfActions = dailyTasks.length;
+
+  // minute units
+  var workDay = 480;
+
+  var minimumIncrement = 20;
+  var maximumIncrement = Math.round(480 / numberOfActions);
 
   for (var i = 0; i < dailyTasks.length - 1; i++) {
     queue.add(dailyTasks[i]);
@@ -167,6 +174,10 @@ function buildDay() {
   function nextDay() {
     console.log('_____________________________________'.bold.cyan);
     deferred.resolve();
+
+    // reset daily tracking
+    dailyCashMovement.length = 0;
+    dailyCashMovement = [];
 
     today.add(1, 'day');
     today.hour(9);
@@ -220,6 +231,22 @@ function invoicePatient() {
   return lib.protractor('patientInvoice', {invoiceDetails : invoiceDetails});
 }
 
+// generic transfer from the cash window to the princaple cash box
+function transferCash() {
+
+  var totalPaidToday = _.reduce(dailyCashMovement, function (sum, next) {
+    return sum + next.cost;
+  }, 0);
+  var records = {
+    cashBoxAmount : totalPaidToday
+  };
+
+  console.log('TOTAL TO TRANSFER FROM CASH WINDOW'.bold.cyan);
+  console.log(records.cashBoxAmount);
+
+  return lib.protractor('cashTransfer', { cashRecords : records });
+}
+
 function payInvoice() {
   var availablePatients = _.keys(invoices);
   var targetPatient = _.sample(availablePatients);
@@ -240,6 +267,9 @@ function payInvoice() {
 
   console.log('After payment:'.bold.cyan);
   console.log(`${JSON.stringify(invoices[targetPatient])}`.bold.cyan);
+
+  dailyCashMovement.push(invoice);
+
   if (invoices[targetPatient].length === 0) {
     delete invoices[targetPatient];
   }

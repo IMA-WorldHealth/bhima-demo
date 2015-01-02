@@ -29,8 +29,8 @@ describe.only('Invoice Patient', () => {
   var invoiceDetails = JSON.parse(browser.params.invoiceDetails);
 
   it('Invoices a patient', function () {
-    // helpers.navigate(invoice_path);
-    browser.get('#/invoices/patient');
+    helpers.navigate(invoice_path);
+    // browser.get('#/invoices/patient');
 
     var data = invoiceDetails.inventoryItems;
 

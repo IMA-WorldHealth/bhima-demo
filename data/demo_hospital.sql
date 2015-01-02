@@ -39,6 +39,7 @@ INSERT INTO `permission` (unit_id, user_id) VALUES
 (14,1),
 (134,1),
 (137,1),
+(147,1),
 (18, 1);
 
 INSERT INTO `exchange_rate` VALUES

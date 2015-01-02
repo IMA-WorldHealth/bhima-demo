@@ -20,7 +20,8 @@ const config = {
     login : ['actions/login.spec.js'],
     patientRegistration : ['actions/registerPatient.spec.js'],
     patientInvoice : ['actions/invoicePatient.spec.js'],
-    invoicePayment : ['actions/payInvoice.spec.js']
+    invoicePayment : ['actions/payInvoice.spec.js'],
+    cashTransfer : ['actions/cashTransfer.spec.js']
   },
 
   framework : 'mocha',
