@@ -4,6 +4,7 @@
   "description": "Demo hospital build for the BHIMA HIS. Includes build scripts as well as standardised test build snapshots.",
   "main": "index.js",
   "dependencies": {
+    "colors": "^1.1.2",
     "jshint": "^2.9.4",
     "karma-ng-html2js-preprocessor": "^1.0.0",
     "promise-queue": "^2.2.3",

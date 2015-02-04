@@ -5,7 +5,7 @@
 		{
 			"uuid": "00efb27b-0d50-4561-bf13-94337c069c2a",
 			"code": "110001",
-			"text": "ampicilline susp '100 ml125mg/5ml",
+			"text": "ampicilline susp 100 ml125mg/5ml",
 			"price": 0.6600,
 			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
 			"unit_id": 2,
@@ -743,7 +743,7 @@
 		{
 			"uuid": "70f7ea88-1370-434c-8655-c68e43dc98ea",
 			"code": "110011",
-			"text": "penicilline VK susp '100 ml125mg/5ml",
+			"text": "penicilline VK susp 100 ml125mg/5ml",
 			"price": 1.3900,
 			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
 			"unit_id": 2,
@@ -1202,7 +1202,7 @@
 		{
 			"uuid": "c0179142-ee8b-4848-8271-9a64ea5a6521",
 			"code": "110007",
-			"text": "chloramphenicol susp,'60 ml125/5ml",
+			"text": "chloramphenicol susp,60 ml125/5ml",
 			"price": 2.1000,
 			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
 			"unit_id": 2,

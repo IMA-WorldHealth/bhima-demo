@@ -64,6 +64,7 @@ var checkSession = function() {
           });
           var output = `const output = ${format}; module.exports = output;`;
           fs.writeFile('selenium_config.js', output);
+          console.log('Writing configuration file...');
         } else {
           // directly run the demo build
           // environment variable work around

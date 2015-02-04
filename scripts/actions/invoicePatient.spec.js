@@ -31,6 +31,7 @@ describe.only('Invoice Patient', () => {
   it('Invoices a patient', function () {
     helpers.navigate(invoice_path);
 
+
       // array of random inventory
       // var data = [
         // { invoice: '110001', qte: 5 }, { invoice: '100102', qte: 100 }, { invoice: '100095', qte: 10 },
@@ -39,7 +40,10 @@ describe.only('Invoice Patient', () => {
       //
       var data = invoiceDetails.inventoryItems;
 
-      var invoice = data[Math.floor(Math.random() * data.length)];
+      console.log(data);
+      console.log(typeof data);
+
+      // var item = data[Math.floor(Math.random() * data.length)];
 
       var page = new PatientInvoicePage();
 
@@ -51,15 +55,22 @@ describe.only('Invoice Patient', () => {
 
       page.details(pid, new Date(), `Invoice for a patient`);
 
-      // add two inventory items to each row (0-indexing)
-      page.addInventoryItem(0, invoice.invoice);
+      browser.ignoreSynchronization = true;
+      page.addRows(data.length - 1);
+      data.forEach(function (item, index) {
+        // add two inventory items to each row (0-indexing)
+        page.addInventoryItem(index, item.code);
 
-      // change the required quantities
-      page.adjustItemQuantity(0, invoice.qte);
-
+        // change the required quantities
+        // page.adjustItemQuantity(0, invoice.qte);
+        page.adjustItemQuantity(index, 20);
+      });
       // submit the page
+      //
+      browser.ignoreSynchronization = false;
       page.submit();
 
       page.reset();
+
   });
 });
