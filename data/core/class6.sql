@@ -1,0 +1,36 @@
+-- CLASS 6 ACCOUNTS 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+INSERT INTO `account` (`id`, `type_id`, `enterprise_id`, `number`, `label`, `parent`, `locked`, `cc_id`, `pc_id`, `created`, `classe`, `is_asset`, `reference_id`, `is_brut_link`, `is_title`, `is_charge`) VALUES
+(200, 4, 1, 601, 'ACHATS DE MARCHANDISES', 47, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(201, 3, 1, 60111010, 'Achat Médicaments en comprimés', 200, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(202, 3, 1, 60111011, 'Achat Médicaments en Sirop', 200, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(203, 3, 1, 60111012, 'Achat Médicaments en crème', 200, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(204, 3, 1, 60111013, 'Achat Médicaments en Poudre et Capsul', 200, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(205, 3, 1, 60111014, 'Achat Injectables', 200, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(206, 3, 1, 60111015, 'Achat Produit  de Perfusion', 200, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(207, 3, 1, 60111016, 'Achat Produits Ophtamologiques', 200, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+
+(208, 4, 1, 603, 'VARIATIONS DES STOCKS DE BIENS ACHETÉS', 47, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(209, 3, 1, 60310010, 'Médicaments en comprimés', 208, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(210, 3, 1, 60310011, 'Médicaments en Sirop', 208, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(211, 3, 1, 60310012, 'Achat Médicaments en crème', 208, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(212, 3, 1, 60310013, 'Achat Médicaments en Poudre et Capsul', 208, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(213, 3, 1, 60310014, 'Achat Injectables', 208, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(214, 3, 1, 60310015, 'Achat Produit  de Perfusion', 208, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(215, 3, 1, 60310016, 'Achat Produits Ophtamologiques', 208, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+
+(216, 4, 1, 605, 'AUTRES ACHATS', 47, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(217, 3, 1, 60511010, 'Eau', 216, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(218, 3, 1, 60521010, 'Electricité', 216, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL), 
+
+(219, 4, 1, 661, 'RÉMUNÉRATIONS DIRECTES VERSÉES AU PERSONNEL NATIONAL', 53, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(220, 3, 1, 66110011, 'Remunération Personnel', 219, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+
+(221, 4, 1, 676, 'PERTES DE CHANGE', 54, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL),
+(222, 3, 1, 67611010, 'Différences de change', 221, 0, NULL, NULL, '2016-10-23 17:05:34', NULL, NULL, NULL, NULL, 0, NULL)
+;

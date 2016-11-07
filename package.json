@@ -1,0 +1,28 @@
+{
+  "name": "bhima-demo",
+  "version": "1.0.0",
+  "description": "Demo hospital build for the BHIMA HIS. Includes build scripts as well as standardised test build snapshots.",
+  "main": "index.js",
+  "dependencies": {
+    "jshint": "^2.9.4",
+    "karma-ng-html2js-preprocessor": "^1.0.0",
+    "promise-queue": "^2.2.3",
+    "protractor": "^4.0.10",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IMA-WorldHealth/bhima-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IMA-WorldHealth/bhima-demo/issues"
+  },
+  "homepage": "https://github.com/IMA-WorldHealth/bhima-demo#readme"
+}
