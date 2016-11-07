@@ -1,0 +1,1518 @@
+{
+	"table": "inventory",
+	"rows":
+	[
+		{
+			"uuid": "00efb27b-0d50-4561-bf13-94337c069c2a",
+			"code": "110001",
+			"text": "ampicilline susp '100 ml125mg/5ml",
+			"price": 0.6600,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "00f2e956-4a75-4dc8-82dd-1e8eca56fce7",
+			"code": "100029",
+			"text": "cimetidine , tagamet,pintapro 200 mg",
+			"price": 0.0500,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "0105ea85-dfde-4d48-a434-355b43a363fb",
+			"code": "100007",
+			"text": "amoxycilline 250 mg",
+			"price": 0.0400,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "032c9694-d4d1-4ae7-95af-bcc78bf91e00",
+			"code": "100125",
+			"text": "Arinate",
+			"price": 0.4400,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 5,
+			"consumable": 1
+		},
+		{
+			"uuid": "03e3a21a-9985-498e-84de-6d4ad3069668",
+			"code": "100030",
+			"text": "ciprofloxacine (cifin ) 500 mg tab",
+			"price": 0.0900,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "04333d8f-1445-4a85-b130-0d3279e2264b",
+			"code": "100019",
+			"text": "captopril 25 mg25mg",
+			"price": 0.3700,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "04be44e3-b04d-4bca-af62-16850656f169",
+			"code": "1100210",
+			"text": "Zidovudine (ZDV) 300mg+Lamivudine (3TC) 150mg, tab, 60",
+			"price": 0.2991,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "068f01ca-a6e1-4ead-8eb9-a8142946eae6",
+			"code": "100065",
+			"text": "isosorbide dinitrate 5 mg blister",
+			"price": 0.0800,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "06d193f6-d609-4e39-b23d-34e3551a9b2b",
+			"code": "100108",
+			"text": "spironolactone 25 mg",
+			"price": 0.0800,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "06e8d1f6-ea34-4310-9ea9-bf8255f3ad8f",
+			"code": "100002",
+			"text": "acide folique5 mg",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "0753c89f-dff4-416f-8e6d-9d8b13c677a0",
+			"code": "1100208",
+			"text": "Azithromycine,250mg,tab, 6",
+			"price": 0.1810,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "09bdb6ed-5639-4779-952b-10950cd15c7e",
+			"code": "100064",
+			"text": "isoniazide/thiacetazone100/50mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "0a900100-6b1b-469e-b3a0-a7c59e732b63",
+			"code": "005001",
+			"text": "Cotrimoxazol 960 mg tab",
+			"price": 0.7930,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 9,
+			"consumable": 1
+		},
+		{
+			"uuid": "0ca82c82-0812-44dd-bfb9-be7d05d00018",
+			"code": "170449",
+			"text": "Nevirapine (NVP) Sirop,10mg/ml,240ml, fl",
+			"price": 5.4534,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 10,
+			"consumable": 1
+		},
+		{
+			"uuid": "0f00aad9-4215-4636-b760-05fe9b79584e",
+			"code": "100027",
+			"text": "chlorpheniramine 4 mg",
+			"price": 0.0035,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "1242e12c-88ff-405c-a4b9-ea7eda0e9f77",
+			"code": "100076",
+			"text": "niclosamide500 mg",
+			"price": 0.0600,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "13076815-2132-405f-aa0e-d12a39c9698c",
+			"code": "100004",
+			"text": "allopurinol 100 mg100 mg",
+			"price": 0.0300,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "156b70bb-5e56-4365-aeaf-4ddc5694f872",
+			"code": "110014",
+			"text": "salbutamol oral 0,5",
+			"price": 3.7000,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "15e6dde9-07e9-4992-9a73-748cff5c4fbd",
+			"code": "100130",
+			"text": "Glyciphage 850mg, tab",
+			"price": 0.2470,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "1613e30b-d773-4bc4-a7df-08da335afc3e",
+			"code": "100096",
+			"text": "prednisone 5 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "17e269b9-41ad-4f07-b2b9-9fc9eae9dfeb",
+			"code": "100079",
+			"text": "norethisterone 5 mg tab",
+			"price": 0.1400,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "17ea51ae-53c4-46d8-92b4-a10b9228b78d",
+			"code": "100022",
+			"text": "cefaclor ( cifidine) , cefixine250 mg",
+			"price": 0.2700,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "1a5615d3-f649-4307-b3f8-5a16b9676b14",
+			"code": "100078",
+			"text": "nitrofurantoine(furadatin)100 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "1a670e28-68fc-4b80-bfa2-74983a96c364",
+			"code": "100126",
+			"text": "Aciclovir 200mg, tab 100 vrac",
+			"price": 0.0379,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "1a6a1c3e-9b3b-42f2-a8b3-ea5f7c3bca94",
+			"code": "100119",
+			"text": "vitamine C (acide ascorbic) 250 mg tab",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "1b2a880d-a9a9-45df-8dca-328f0c9acc53",
+			"code": "100040",
+			"text": "diazepam5 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "1bbba437-1166-484f-bd8b-e344a4c6b734",
+			"code": "100085",
+			"text": "papaverine40mg",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "1c018d04-2387-4901-b487-a135a278f1fb",
+			"code": "100074",
+			"text": "metronidazole , flagyl 250 mg tab",
+			"price": 0.0500,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "1fb9c1c3-531f-4235-a7ff-ef92ca7bf29e",
+			"code": "100801",
+			"text": "Ibuprofen 200mg tab",
+			"price": 0.0153,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "21ef4a8f-b26f-4fcb-a63e-c5c3223a0ca7",
+			"code": "100026",
+			"text": "chloroquine phosph150 mg base tab",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "225453d5-4e0b-48d4-b7eb-cf916d7e1c15",
+			"code": "1100207",
+			"text": "Misoprostol, 0.2mg, tab, 100",
+			"price": 0.1690,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "2412f3cb-748b-4abb-bcfd-f11282fc8b88",
+			"code": "1100202",
+			"text": "Phenobarbital, 100mg, 1000, vrac",
+			"price": 0.0227,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "248c675a-7013-4b98-9301-27c8277a3ce2",
+			"code": "100013",
+			"text": "aspirine adulte 500 mg tab (EML)",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "24b7b3ab-1b68-43e0-a541-d17bc048f4be",
+			"code": "110010",
+			"text": "multivitamine sirop500 ml",
+			"price": 1.9000,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "26c3c3c0-fe91-452a-8d00-07e5cdd2e566",
+			"code": "100098",
+			"text": "promethazine 25 mg tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "2765833e-cdad-4f3e-9741-bb85593d30ff",
+			"code": "110016",
+			"text": "Tylenol sirop (cold multivit)",
+			"price": 5.1200,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 8,
+			"consumable": 1
+		},
+		{
+			"uuid": "28a501cd-4261-4845-9890-0c761aa8e8c2",
+			"code": "100084",
+			"text": "ovidon (lo-femenal)",
+			"price": 0.3900,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "293027e5-f3ba-4817-883f-9ecf91fcdf74",
+			"code": "100032",
+			"text": "clarythromycine( biaxin)250 mg",
+			"price": 0.3200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "2a5c5a6e-6192-475f-8fcc-2c67b9f50aa1",
+			"code": "110018",
+			"text": "Tinidazol 500mg, tab",
+			"price": 0.0520,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "2b39cb6e-40e2-4fc5-baae-3154d423cff4",
+			"code": "100036",
+			"text": "co trimoxazole100/20 mg tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "2e5182cf-4c41-4142-aba4-15d854034edd",
+			"code": "100045",
+			"text": "ephedrine HCL 30 mg",
+			"price": 0.2700,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "2e98555f-2174-4f1c-a0c9-275a91c5c3e4",
+			"code": "100140",
+			"text": "Chlorpromazine HCL 100mg, tab",
+			"price": 0.0262,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "300634fa-36aa-486a-a4af-e434fbd59acd",
+			"code": "100131",
+			"text": "Sulphate de Zinc",
+			"price": 0.7000,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 5,
+			"consumable": 1
+		},
+		{
+			"uuid": "305eb49a-e2a1-4c51-92e6-dfa2ac8ef5e7",
+			"code": "100009",
+			"text": "ampicilline 250 mg caps",
+			"price": 0.0300,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "335d6b10-5059-40c3-86d7-b76f7ffa44a5",
+			"code": "100073",
+			"text": "metoclopramide 10 mg tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "342da0ca-99c1-4d68-a678-2b536ba48f52",
+			"code": "100141",
+			"text": "Na DCC 167mg tab, 200 Vrac",
+			"price": 0.1008,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "35d9bb52-77f8-45b8-82d7-60f9e82792e6",
+			"code": "100049",
+			"text": "ethambutol 400 mg",
+			"price": 0.0600,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "36e10335-2133-4af4-88c6-b29f3a116c38",
+			"code": "1100205",
+			"text": "Artesinate+Amodiaquine,100mg+270mg base,tab, 6 adulte",
+			"price": 0.2048,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "375718ab-966d-4e9f-88b4-fe15071a16d5",
+			"code": "1100200",
+			"text": "Amoxycilline 125mg/5ml, susp",
+			"price": 0.6600,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 8,
+			"consumable": 1
+		},
+		{
+			"uuid": "37dd78de-d4cb-4931-9c3b-5a5e06b683c1",
+			"code": "100046",
+			"text": "ergotamine 1 mg + caffeine 100 tab, blister",
+			"price": 0.6900,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "3a95ff60-ba1d-4a9f-8774-826397f6737b",
+			"code": "100094",
+			"text": "piracetam 400mg(nootropil)400 mg",
+			"price": 0.3400,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "3b988564-edef-42bc-a788-595589fe04d0",
+			"code": "100031",
+			"text": "ciprofloxacin100mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "3c86ccfe-0514-47bb-95a7-79a4780f18c1",
+			"code": "100003",
+			"text": "albendazole",
+			"price": 0.1300,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "3cdabcea-eb13-43f9-b6ce-10d737d29250",
+			"code": "100054",
+			"text": "glibenclamide 5 mg, tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "3e96743a-57f2-4c8f-ae35-5746c5d29938",
+			"code": "100018",
+			"text": "calcium lactate 300 mg",
+			"price": 0.0300,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "3ebe8581-c4e3-4fb7-8ecf-330e0e529459",
+			"code": "100102",
+			"text": "quinine sulphate 500 mg",
+			"price": 0.1500,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "407935df-78b2-46e3-b9dc-1f3bc92bb539",
+			"code": "120016",
+			"text": "cyclophosphamide200 mg",
+			"price": 17.1900,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "40b1e004-6221-428e-8564-02aee03928aa",
+			"code": "100115",
+			"text": "tribexfort(bte de 30 ces)",
+			"price": 0.0700,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "45b76a9f-bcd7-4f20-9ede-b3f79d75e652",
+			"code": "110004",
+			"text": "barium sulphate susp. pde1 gr",
+			"price": 1.9200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "48d65273-1cfb-429f-a0f7-32fae2a1eead",
+			"code": "100052",
+			"text": "fer sulphate 200 mg",
+			"price": 0.0000,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "49de2c11-74ae-4390-8256-c3cc74509085",
+			"code": "100124",
+			"text": "Acide nalidixique 500mg tab",
+			"price": 0.0807,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "4bbc2837-394e-4fcf-8d43-9a3b9bd086bd",
+			"code": "100048",
+			"text": "erythromycine 500 mg tab",
+			"price": 0.1500,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "4c7b53ac-c76e-4424-8618-b9c94b911d00",
+			"code": "100059",
+			"text": "hyoscine tab 10 mg BP",
+			"price": 0.0500,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "4d19c83a-73fa-4b23-9140-6d790a59d0e1",
+			"code": "1100201",
+			"text": "Griseofuvine 250mg, 1000, vrac",
+			"price": 0.0422,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "4e40ce17-868e-48e6-93ee-e870f0c40ad3",
+			"code": "100057",
+			"text": "hydralazine25 mg",
+			"price": 0.0500,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "4fcd6952-5e69-4385-a867-f7a1359d0617",
+			"code": "160002",
+			"text": "Atropine 1%Flc 5cc",
+			"price": 0.9400,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "50e1fdc4-e243-49b9-abc1-a0a98a318dda",
+			"code": "100028",
+			"text": "chlorpromazine 25 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "511d9e48-23eb-4b82-881b-ea63033fa9c5",
+			"code": "100060",
+			"text": "ibuprofen 400 mg",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "538c3edc-853d-48bf-8d12-367a8cb1ed84",
+			"code": "100023",
+			"text": "chloroquine phosph100mgbase",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "53c976b3-b474-4de8-a3f9-29b57bee4a6e",
+			"code": "100143",
+			"text": "Sachet de medicaments,10*8cm sch bte de 500 unités",
+			"price": 0.0068,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 14,
+			"consumable": 1
+		},
+		{
+			"uuid": "54de8b92-e58b-4b2f-9af1-da4c1ccdbf8e",
+			"code": "100008",
+			"text": "amoxycilline 500 mg500 mg",
+			"price": 0.0800,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "5fa843bb-88a3-4bbf-b8ca-2806dcef598c",
+			"code": "100087",
+			"text": "paracetamol 500mg tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "6157f163-ac5c-425a-a973-88588bfa2593",
+			"code": "1100204",
+			"text": "Artesinate+Amodiaquine, 100mg+270mg, base tab 3, 6-13ans",
+			"price": 0.2629,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "61ecf054-60a8-4914-9ff9-3fd55734cb4e",
+			"code": "110020",
+			"text": "Amoxycilline 250mg/5ml, 100ml, fl",
+			"price": 0.9148,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 10,
+			"consumable": 1
+		},
+		{
+			"uuid": "63fa317d-a030-4f97-b831-e0399ad9b5ea",
+			"code": "100070",
+			"text": "mefloquine250mg",
+			"price": 0.9600,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "64d05f52-80b6-43e6-83e3-9b75e40f6430",
+			"code": "100106",
+			"text": "rifampicine150 mg",
+			"price": 0.0700,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "6798d6a5-b7b6-4f64-ba81-91c2016ee666",
+			"code": "100033",
+			"text": "clofazimine(lamprene)100 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "6850743a-bf2f-47ff-b98c-447cb76e5039",
+			"code": "100129",
+			"text": "Glycophage 500mg, tab",
+			"price": 0.1924,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "6993e74b-0e74-4901-babb-f89c90c86844",
+			"code": "100090",
+			"text": "penicilline-phenoxymethyl) Pen VK250 mg",
+			"price": 0.0700,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "6e1367b1-9e22-41d6-9366-bfc49a623fd7",
+			"code": "100120",
+			"text": "vitamineB1 (thiamine)100 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "6e1e7505-46ec-4b18-9dc7-0edc39d63a09",
+			"code": "100058",
+			"text": "hydrochorthiazide 50 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "6f4ae92f-5765-4526-b66a-1ec4d11bb3a7",
+			"code": "100041",
+			"text": "Diclofenac sodium 25 mg tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "70f7ea88-1370-434c-8655-c68e43dc98ea",
+			"code": "110011",
+			"text": "penicilline VK susp '100 ml125mg/5ml",
+			"price": 1.3900,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "71dd0df5-39e4-44bd-ae29-5b2096ad8e41",
+			"code": "100100",
+			"text": "propranolol40 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "758b352d-c1f0-40b1-94b1-58e47aed270c",
+			"code": "100010",
+			"text": "ampicilline 500 mg caps",
+			"price": 0.0900,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "78569037-828c-427a-9f88-952d10ca8ee6",
+			"code": "100044",
+			"text": "doxycyline100 mg",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "7a0bf698-cd09-4058-9994-755c0b043551",
+			"code": "160001",
+			"text": "Amethocaine 0.5%Flc 5cc",
+			"price": 0.8100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "7b232c0e-b2c0-41fa-b9c8-9aae3a6baf55",
+			"code": "100062",
+			"text": "isoniazide (inh) 100 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "7b453917-52e0-4d7b-bad0-90fa501d784c",
+			"code": "100069",
+			"text": "mebendazole100 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "7ce024fd-c2ad-4bae-a8d3-b33fea76b914",
+			"code": "100095",
+			"text": "praziquantel (biltricide) 600 mg",
+			"price": 0.2500,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "7fee39d6-4228-45e9-abe6-a7fa94f00ac6",
+			"code": "100118",
+			"text": "vitamine B6(pyridoxine)50 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "8810ff54-5e3b-4ee3-8350-891be97f0b0e",
+			"code": "003001",
+			"text": "ACT 50mg/135 mg 1 a 5 ans",
+			"price": 0.4838,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 9,
+			"consumable": 1
+		},
+		{
+			"uuid": "8a8ab9e6-1407-48f8-878e-66e6917c7e1e",
+			"code": "100075",
+			"text": "multivitamine tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "8bc29fbc-fe6b-422d-956b-584fbfa58fb8",
+			"code": "110003",
+			"text": "amoxicillin 125 mg/5ml, dry powder40/100ml",
+			"price": 0.6600,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "8c39eb76-9906-45ec-9765-6442fdeadc68",
+			"code": "100082",
+			"text": "nystatin orale500,000iu tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "8c8162a9-ec32-4f99-9856-65b01a099726",
+			"code": "100037",
+			"text": "colchicine",
+			"price": 0.1000,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "8e164aa7-5c70-4fe4-9747-5beed1a9ffdb",
+			"code": "100114",
+			"text": "tolbutamide500 mg",
+			"price": 0.0400,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "949102cb-37dc-41b6-86b4-baf0156b52a5",
+			"code": "1100206",
+			"text": "Clotrimazole,500mg,tab gynecologique,6,",
+			"price": 0.2935,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "9a4841e7-368b-4387-b234-10ca004b7c56",
+			"code": "100127",
+			"text": "Magnesium Trisilicate + Aluminium Hydroxyde, 250+120mg, tab",
+			"price": 0.0058,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "9c125b5a-e708-4bc0-8606-b58673a62f2e",
+			"code": "00010001",
+			"text": "ACT 100mg/270mg adulte",
+			"price": 0.6451,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 9,
+			"consumable": 1
+		},
+		{
+			"uuid": "9c496d63-65a0-485f-bea9-27351bb99b7e",
+			"code": "100047",
+			"text": "erythromycine 250 mg tab",
+			"price": 0.0700,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "9c6c2052-a0a8-46b1-827a-0c32537ff485",
+			"code": "100086",
+			"text": "paracetamol500 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "9df335f2-c1fe-44bc-81e0-1a46fb55bbce",
+			"code": "170448",
+			"text": "Nystatin,100.000UI/ml,suspension orale,30ml,fl",
+			"price": 1.5000,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 10,
+			"consumable": 1
+		},
+		{
+			"uuid": "9e6c4395-46bd-42ca-86a7-e6b5a853805e",
+			"code": "100105",
+			"text": "rifampicine300 mg",
+			"price": 0.1400,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "9efa6b7c-5775-4494-8bf6-07861d7e9ef6",
+			"code": "100038",
+			"text": "cyclophosphamide 50 mg",
+			"price": 0.3100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "a043c1b2-5b18-4418-930b-258410e3bff5",
+			"code": "100053",
+			"text": "furosemide 40 mg tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "a28de551-3d51-4c3a-b678-c0b75e608bc4",
+			"code": "100144",
+			"text": "Sachet medicaments 6*8 cm bte de 500 unités",
+			"price": 0.0065,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 14,
+			"consumable": 1
+		},
+		{
+			"uuid": "a2d7c691-3df1-4f72-9400-599fb3807ef2",
+			"code": "100051",
+			"text": "Fer + acide folique200 mg+0.25 mg",
+			"price": 0.0014,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "a3184b19-be3a-439d-a692-93602a006f54",
+			"code": "1100214",
+			"text": "Artesinate+Amodiaquine,25mg+67.5mg base, tab, 3 2-11mois",
+			"price": 0.0251,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "a355ad04-d555-4c64-8036-ec1f2a361061",
+			"code": "100011",
+			"text": "ampicilline 875 mg875 mg",
+			"price": 0.1500,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "a380565e-2606-41df-ad06-4c83abe6eb26",
+			"code": "100109",
+			"text": "sulphamethoxypyridazine(fansidar)500 mg",
+			"price": 0.0700,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "ac323348-ebd2-4f97-84ae-598412c18d3e",
+			"code": "100063",
+			"text": "isoniazide/thiacetazone300/150mg",
+			"price": 0.0300,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "af8bcde4-17bb-4d47-b2eb-465b4ebb5e39",
+			"code": "100016",
+			"text": "bisacodyl5 mg",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "b0411c78-c9d7-40be-a747-8a2c4c6d52e9",
+			"code": "120803",
+			"text": "Promethazine Chlorhydrate 5mg/5ml sirop, 100ml",
+			"price": 0.7654,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 10,
+			"consumable": 1
+		},
+		{
+			"uuid": "b08b9848-180e-45fd-b65d-a799223f42af",
+			"code": "100001",
+			"text": "acetazolamide250 mg",
+			"price": 0.8900,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "b0b911fc-c82e-48f7-9e53-c3ab30285655",
+			"code": "100067",
+			"text": "levamizole 50 mg tab",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "b0f75179-98ca-4ae4-bec5-c4aa34e0e9e2",
+			"code": "100056",
+			"text": "griseofulvine125 mg, tab",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "b124af8a-dca9-4478-90c9-5beed1c07e8d",
+			"code": "0004001",
+			"text": "ACT 25 mg / 63.5 mg de 0 a 11 mois",
+			"price": 0.4838,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 9,
+			"consumable": 1
+		},
+		{
+			"uuid": "b1d4dd37-73d8-4a15-97f1-15306b42fa4b",
+			"code": "100113",
+			"text": "thyroxine(levothyroxine)",
+			"price": 0.0900,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "b363681f-f867-4028-bcf1-6ad42e97d985",
+			"code": "150061",
+			"text": "tosylochloramine sodique500 mg",
+			"price": 0.9000,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "b417651f-58a9-444c-ad70-04a09cdb4bb2",
+			"code": "100071",
+			"text": "methotrexate2.5 mg",
+			"price": 0.2600,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "b51af157-81f1-462f-b244-1f0a6a84cadd",
+			"code": "100014",
+			"text": "atenolol 100 mg tab",
+			"price": 0.2000,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "b7167236-f5be-492e-b4ef-04386e826049",
+			"code": "140001",
+			"text": "anti-snake vehum10 ml",
+			"price": 295.8900,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "b79b3f7f-5f86-4f7f-9328-d2265ab7407a",
+			"code": "120080",
+			"text": "Coartem tab",
+			"price": 0.1397,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "b9284d2d-c567-469f-ad0d-754f965edb1b",
+			"code": "120066",
+			"text": "Ceftriaxon 1 gr Fl",
+			"price": 5.0000,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 10,
+			"consumable": 1
+		},
+		{
+			"uuid": "b94902f9-686d-455c-b42d-5bada27757d6",
+			"code": "100020",
+			"text": "carbimazole 5mg5mg",
+			"price": 0.0400,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "b989dc76-0429-434d-9bef-be83a8dcc7c9",
+			"code": "100093",
+			"text": "phenytoin Sodium(dilatin)100 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "ba219eff-242d-4542-ac23-9437662a29d4",
+			"code": "100092",
+			"text": "phenobarbital 50 mg tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "bb7d2655-8287-4ada-992a-1a03b895e935",
+			"code": "100104",
+			"text": "reserpine0.25 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "bb9f3888-04af-4d17-8a38-cce7f737e6a2",
+			"code": "100088",
+			"text": "paracetamol 100 mg tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "bc13ef77-3b29-475e-a433-332733ff4073",
+			"code": "110008",
+			"text": "cotrimoxazole susp 100 ml200/40mg/5ml",
+			"price": 2.3200,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "bd90a2e4-fb23-40b7-a569-7548ee1b8131",
+			"code": "110002",
+			"text": "Ampicillin susp250 mg",
+			"price": 2.0000,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "bdea2dc2-fe35-4121-888c-11f30c63bc4a",
+			"code": "100089",
+			"text": "penicilline-phenoxymethyl) Pen VK125 mg",
+			"price": 0.0300,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "c0179142-ee8b-4848-8271-9a64ea5a6521",
+			"code": "110007",
+			"text": "chloramphenicol susp,'60 ml125/5ml",
+			"price": 2.1000,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "c132d5d1-7483-43a8-91d0-4ad0c2370771",
+			"code": "100039",
+			"text": "dapson 5 mg (pt)",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "c319a305-b484-4f83-abfd-45e26fd20cd5",
+			"code": "100043",
+			"text": "digoxine 0.25 mg tab blister",
+			"price": 0.1500,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "c70f0768-45cc-4789-95b3-c8f59fa29ef0",
+			"code": "100061",
+			"text": "indomethacine25 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "c7d6031d-e517-4299-a7bc-1dec7120df97",
+			"code": "100077",
+			"text": "nifedipine 10 mg10 mg",
+			"price": 0.3000,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "c8272ae0-c10a-4915-8afa-04df16f3aa07",
+			"code": "100142",
+			"text": "Mebendazol 500 mg, tab",
+			"price": 0.0136,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "cdedb90c-e6c3-4234-96d4-aa0e278e7641",
+			"code": "1100209",
+			"text": "Levonorgestrel,0.75mg,tab, 2",
+			"price": 0.3867,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "d63f6bf0-cece-40bd-8479-eedec5ef12a5",
+			"code": "1100203",
+			"text": "Ranitidine,150mg, tab, 100",
+			"price": 0.4960,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "d67b7690-1a50-4e80-bea0-200d792362b1",
+			"code": "100128",
+			"text": "Gliben M Plus en plaquette",
+			"price": 0.0425,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "d75b6976-3c89-4793-9828-5101600de4ee",
+			"code": "100097",
+			"text": "proguanil (paludrine)100 mg",
+			"price": 0.0700,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "d75d6d27-a400-44e9-a206-4a913774dfcc",
+			"code": "100099",
+			"text": "propantheline bromide15 mg",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "d9a63582-1b0f-46cf-b8c3-ae9f896bce93",
+			"code": "100012",
+			"text": "Anti acide, Maalox 400/500 mg/ tab",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "db2f4274-66ef-4a64-9e68-b22045b364ec",
+			"code": "110017",
+			"text": "Erythromycine 250mg/5ml, 100ml",
+			"price": 1.9000,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 10,
+			"consumable": 1
+		},
+		{
+			"uuid": "e08af26c-6ccc-4e49-865f-d648f5d624db",
+			"code": "100081",
+			"text": "noscapine15 mg",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "e095e87f-c6b4-4f07-beb7-13e6df044635",
+			"code": "100103",
+			"text": "quinine sulphate 300 mg tab",
+			"price": 0.1600,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "e2a72632-6275-4f47-8821-dc0bc2c1c2a6",
+			"code": "100024",
+			"text": "chloramine 500 mg500mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "e3236209-b294-43cc-be52-71cec116d264",
+			"code": "100042",
+			"text": "diethylcarbamazine citrate 50 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "e4b59d1b-42b3-4a77-8d49-ee6d2dc8a7c2",
+			"code": "100800",
+			"text": "cotrimoxazol 480mg tab",
+			"price": 0.0197,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "e5e0b30c-26f0-4102-89f9-b923d8ce3760",
+			"code": "120081",
+			"text": "Artthefan tab",
+			"price": 0.1397,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "e60c1eaf-8f17-478f-8fc7-2932e39d1545",
+			"code": "100035",
+			"text": "co trimoxazole 400/80mg tab",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "e698a6e4-8333-4b48-8f77-f44cd88e2714",
+			"code": "100080",
+			"text": "nortriptyline 25 mg25 mg",
+			"price": 0.0000,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "e9900ff7-cd75-4887-8d01-8703f5c0817b",
+			"code": "002001",
+			"text": "ACT 100mg/270ml 6 a 13 ans",
+			"price": 0.4838,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 9,
+			"consumable": 1
+		},
+		{
+			"uuid": "e9b241ae-528f-4bf8-82d6-97b2e21a77d8",
+			"code": "100072",
+			"text": "methyldopa250 mg",
+			"price": 0.0500,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "eb3f6f9a-924f-4c79-9ba9-30abf4955043",
+			"code": "100117",
+			"text": "vitamine B complex tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "ec2f22e1-6e87-4adc-ac96-bbf6354dc3d0",
+			"code": "110006",
+			"text": "cefaclor suspension125/5ml",
+			"price": 1.6600,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "eedcad3e-36f1-4f0a-94f6-7c992328263c",
+			"code": "100055",
+			"text": "griseofulvine 500 mg, tab",
+			"price": 0.1100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "f104a3f2-8b21-4e76-a085-9db7db1c9ab0",
+			"code": "1100215",
+			"text": "Artesinate+Amodiaquine, 50mg+135mg base, tab 3, 1-5ans",
+			"price": 0.1849,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 15,
+			"consumable": 1
+		},
+		{
+			"uuid": "f3331ac1-d11d-4093-8433-9ca50891c151",
+			"code": "100015",
+			"text": "biperiden 2 mg2 mg",
+			"price": 0.1500,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "f4c6eb38-fb39-44b9-85a5-f11ab5df8fe9",
+			"code": "110013",
+			"text": "metronidazole sirop 125mg / 5 ml100 ml",
+			"price": 1.3100,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "f638bab2-ce35-470e-8993-94f41370f309",
+			"code": "100101",
+			"text": "pyrazinamide500 mg",
+			"price": 0.0700,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "f6ee4a80-f152-4d07-b8d1-c6f2578b7cbe",
+			"code": "100050",
+			"text": "ethinyloestradiol0.05 mg",
+			"price": 0.6100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "f82ab5b7-928a-409d-8edf-f922e8733001",
+			"code": "110009",
+			"text": "erythromycine125 mg/5ml",
+			"price": 2.3100,
+			"group_uuid": "8337b0ed-64a8-4b84-b721-96bb33e8d05a",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "f87f2b17-4ad2-401c-86ea-ef1a1e9a1392",
+			"code": "100006",
+			"text": "Amitriptyline25 mg",
+			"price": 0.0200,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "fc7c58fc-b32f-490a-9f4a-21448cded8ea",
+			"code": "100107",
+			"text": "salbutamol4 mg tab",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		},
+		{
+			"uuid": "fd1c46c8-f276-4aa4-bebc-7de652ce6c45",
+			"code": "100005",
+			"text": "Aminophyline100 mg",
+			"price": 0.0100,
+			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
+			"unit_id": 2,
+			"consumable": 1
+		}
+	]
+}
