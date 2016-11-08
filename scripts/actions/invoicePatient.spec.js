@@ -29,48 +29,45 @@ describe.only('Invoice Patient', () => {
   var invoiceDetails = JSON.parse(browser.params.invoiceDetails);
 
   it('Invoices a patient', function () {
-    helpers.navigate(invoice_path);
+    // helpers.navigate(invoice_path);
+    browser.get('#/invoices/patient');
 
+    var data = invoiceDetails.inventoryItems;
 
-      // array of random inventory
-      // var data = [
-        // { invoice: '110001', qte: 5 }, { invoice: '100102', qte: 100 }, { invoice: '100095', qte: 10 },
-        // { invoice: '150061', qte: 10 }, { invoice: '170449', qte: 1 }, { invoice: '110006', qte: 1 }
-      // ];
-      //
-      var data = invoiceDetails.inventoryItems;
+    console.log(data);
+    console.log(typeof data);
 
-      console.log(data);
-      console.log(typeof data);
+    // var item = data[Math.floor(Math.random() * data.length)];
 
-      // var item = data[Math.floor(Math.random() * data.length)];
+    var page = new PatientInvoicePage();
 
-      var page = new PatientInvoicePage();
+    // prepare the page with default patient, service, etc
+    // FIXME: CLQ MUST BE THE SELECTED PROJECT
 
-      // prepare the page with default patient, service, etc
-      // FIXME: CLQ MUST BE THE SELECTED PROJECT
+    var pid = invoiceDetails.patient.pid;
+    // page.details(pid, new Date(), `Invoice for a patient`);
 
-      // CLQ1
-      var pid = invoiceDetails.patient.pid;
+    page.patient(pid);
+    FU.input(
+        'PatientInvoiceCtrl.Invoice.details.description',
+        `Invoicing patient ${pid}`
+      );
 
-      page.details(pid, new Date(), `Invoice for a patient`);
+    browser.ignoreSynchronization = true;
+    page.addRows(data.length - 1);
+    data.forEach(function (item, index) {
+      // add two inventory items to each row (0-indexing)
+      page.addInventoryItem(index, item.code);
 
-      browser.ignoreSynchronization = true;
-      page.addRows(data.length - 1);
-      data.forEach(function (item, index) {
-        // add two inventory items to each row (0-indexing)
-        page.addInventoryItem(index, item.code);
+      // change the required quantities
+      // page.adjustItemQuantity(0, invoice.qte);
+      page.adjustItemQuantity(index, item.quantity);
+    });
+    // submit the page
+    //
+    browser.ignoreSynchronization = false;
+    page.submit();
 
-        // change the required quantities
-        // page.adjustItemQuantity(0, invoice.qte);
-        page.adjustItemQuantity(index, item.quantity);
-      });
-      // submit the page
-      //
-      browser.ignoreSynchronization = false;
-      page.submit();
-
-      page.reset();
-
+    page.reset();
   });
 });

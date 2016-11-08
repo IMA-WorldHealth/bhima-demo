@@ -17,7 +17,6 @@ const moment = require('moment');
 const FU = require(root('FormUtils'));
 const components = require(root('components'));
 const helpers = require(root('helpers'));
-const dbPatients = require(root('../patient/db/patients'));
 
 helpers.configure(chai);
 
@@ -27,24 +26,19 @@ describe.only('Patient Registration', () => {
   const path = '#/patients/register';
   beforeEach(() => helpers.navigate(path));
 
-  console.log('received params');
   var patient = JSON.parse(browser.params.patient);
-  console.log(patient);
-  console.log(typeof(patient));
 
   const TOTAL_ITEMS = 2;
 
   let inc = 0;
   let date = new Date;
 
-  let patients = _.take(dbPatients, TOTAL_ITEMS);
-
   let item = patient;
   let index = 0;
 
   // patients.forEach((item, index) => {
 
-    it(`Register patient ${index} of ${patients.length}`, done => {
+    it(`Register patient`, function () {
 
       browser.ignoreSynchronization = true;
       // patient name
@@ -70,18 +64,15 @@ describe.only('Patient Registration', () => {
       components.locationSelect.set(helpers.data.locations, 'current-location-id');
 
       // set the debtor group
-      let debtorGroup = patientDebtorGroup(index);
+      let debtorGroup = patientDebtorGroup();
       FU.uiSelect('PatientRegCtrl.finance.debtor_group_uuid', debtorGroup);
-
-      item.registration_date = patientRegistrationDate(index);
-      components.dateEditor.set(item.registration_date);
 
       browser.ignoreSynchronization = false;
 
       // submit the patient registration form
       FU.buttons.submit();
 
-      done();
+      $('[data-action="close"]').click();
     });
 
   // });
@@ -92,12 +83,24 @@ describe.only('Patient Registration', () => {
     return registrationDate.toDate();
   }
 
-  function patientDebtorGroup(count) {
-    if (count <= 5) { return 'Guest House'; }
-    else if (count <= 20) { return 'Organisme Non Gouvernemental'; }
-    else if (count <= 40) { return 'REGIDESO'; }
-    else if (count <= 60) { return 'SNEL'; }
-    else { return 'Patient Payant Cash'; }
+  // TODO move this to demo file
+  function patientDebtorGroup() {
+    var selectIndex = _.random(0, 4);
+    var paysCash = _.random(0, 1);
+
+    if (paysCash) {
+      return 'Patient Payant Cash';
+    }
+
+    var options = [
+      'Guest House',
+      'Organisme Non Gouvernemental',
+      'REGIDESO',
+      'SNEL',
+      'Patient Payant Cash'
+    ];
+
+    return options[selectIndex];
   }
 
 });
