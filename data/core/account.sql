@@ -266,6 +266,3 @@ INSERT INTO `cash_box_account_currency` (`id`, `currency_id`, `cash_box_id`, `ac
 (2, 2, 1, 191, 194),
 (3, 1, 2, 187, 198),
 (4, 2, 2, 190, 195);
-
-
-

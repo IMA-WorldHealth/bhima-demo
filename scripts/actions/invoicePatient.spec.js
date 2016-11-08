@@ -63,7 +63,7 @@ describe.only('Invoice Patient', () => {
 
         // change the required quantities
         // page.adjustItemQuantity(0, invoice.qte);
-        page.adjustItemQuantity(index, 20);
+        page.adjustItemQuantity(index, item.quantity);
       });
       // submit the page
       //

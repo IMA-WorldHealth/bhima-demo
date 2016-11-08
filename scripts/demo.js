@@ -32,18 +32,25 @@ let today = new moment(fiscalYearStart);
 var patientsList = require('./data/patients');
 var inventory = require('./data/inventory').rows;
 
+
+// map of patient ID to invoices, invoices are in order of creation and should be
+// paid from the bottom up
+var invoices = {};
+
 var registeredPatients = [];
-var PROJECT_CODE = 'CLQ';
+var PROJECT_CODE = 'HSP';
 
 // var totalPatients = 5;
 // patientsList = _.take(patientsList, totalPatients);
 
 var count = 0;
 
-queue.add(login)
-  .then(function () {
-    buildDay();
-  });
+// queue.add(login)
+  // .then(function () {
+
+buildDay();
+
+// });
 // queue.add(registerPatient);
 // queue.add(invoicePatient);
 // queue.add(registerPatient);
@@ -80,10 +87,7 @@ function buildDay() {
 
   // this enterprise doesn't work on Sundays
   if (IS_SUNDAY) {
-    console.log('_____________________________________'.bold.cyan);
-    deferred.resolve();
     nextDay();
-    buildDay();
     return;
   }
 
@@ -92,7 +96,13 @@ function buildDay() {
    */
   var numberOfPatients = _.random(1, 3);
   var numberOfInvoices = _.random(1, 6);
-  var numberOfPayments = _.random(1, 6);
+  var numberOfPayments = _.random(1, 3);
+
+  // ensure number of payments can be met
+  var maxInvoices = availableInvoices();
+  if (numberOfPayments > maxInvoices) {
+    numberOfPayments = maxInvoices;
+  }
   // TODO ADD REPORTS + POSTING + TRANSFERS TO TASKS
   // the journal is posted to the general ledger at the end of every day
 
@@ -103,6 +113,7 @@ function buildDay() {
 
   console.log('-> Registering', String(numberOfPatients).bold.blue, 'patients');
   console.log('-> Invoicing', String(numberOfInvoices).bold.blue, 'patients');
+  console.log('-> Paying', String(numberOfPayments).bold.blue, 'patients');
 
   /**
    * Populate Task List
@@ -112,13 +123,13 @@ function buildDay() {
 
   populateTaskList(dailyTasks, registerPatient, numberOfPatients);
   populateTaskList(dailyTasks, invoicePatient, numberOfInvoices);
-  // populateTaskList(dailyTasks, payInvoice, numberOfPayments);
+  populateTaskList(dailyTasks, payInvoice, numberOfPayments);
 
   /**
    * Calculate Time Interval Sets
    */
-  var numberOfActions = numberOfPatients + numberOfInvoices;
-  // var numberOfActions = numberOfPatients + numberOfInvoices + numberOfPayments;
+  // var numberOfActions = numberOfPatients + numberOfInvoices;
+  var numberOfActions = numberOfPatients + numberOfInvoices + numberOfPayments;
 
   // minute units
   var workDay = 480;
@@ -143,10 +154,7 @@ function buildDay() {
   // add the final task
   queue.add(dailyTasks[dailyTasks.length - 1])
     .then(function () {
-      console.log('_____________________________________'.bold.cyan);
-      deferred.resolve();
       nextDay();
-      buildDay();
     });
 
 
@@ -157,9 +165,14 @@ function buildDay() {
   }
 
   function nextDay() {
+    console.log('_____________________________________'.bold.cyan);
+    deferred.resolve();
+
     today.add(1, 'day');
     today.hour(9);
     today.minutes(0);
+
+    buildDay();
   }
   return deferred.promise;
 }
@@ -181,8 +194,66 @@ function invoicePatient() {
     patient : { pid : selectPatient.pid }
   };
 
+
   invoiceDetails.inventoryItems = _.sampleSize(inventory, _.random(1, 5));
+
+  invoiceDetails.inventoryItems = _.map(invoiceDetails.inventoryItems, function (item) {
+    item.quantity = _.random(1, 5);
+    return item;
+  });
+
+  // TODO this does not factor in billing services or subsides
+  var totalCost = _.reduce(invoiceDetails.inventoryItems, function(sum, next) {
+    return sum + (next.price * next.quantity);
+  }, 0);
+
+  totalCost = _.round(totalCost, 2);
+
+  console.log(`Total cost of invoice ${totalCost}`.bold.cyan);
+
+  invoices[selectPatient.pid] = invoices[selectPatient.pid] || [];
+  invoices[selectPatient.pid].push({
+    patientId : selectPatient.pid,
+    cost : totalCost
+  });
+
   return lib.protractor('patientInvoice', {invoiceDetails : invoiceDetails});
+}
+
+function payInvoice() {
+  var availablePatients = _.keys(invoices);
+  var targetPatient = _.sample(availablePatients);
+
+  console.log(`Paying invoices for ${targetPatient}`.bold.cyan);
+  console.log(`${JSON.stringify(invoices[targetPatient])}`.bold.cyan);
+
+  // always take the first bill that the patient was billed
+  var invoice = invoices[targetPatient][0];
+
+  console.log('INVOICE TO BE PAYED'.bold.cyan);
+  console.log(JSON.stringify(invoice).bold.cyan);
+
+  var payFullInvoice = true;
+
+  // if payment was made in full
+  invoices[targetPatient].shift();
+
+  console.log('After payment:'.bold.cyan);
+  console.log(`${JSON.stringify(invoices[targetPatient])}`.bold.cyan);
+  if (invoices[targetPatient].length === 0) {
+    delete invoices[targetPatient];
+  }
+
+
+  return  lib.protractor('invoicePayment', { invoice : invoice });
+}
+
+// return the total number of invoices that can be paid today without creating any new ones
+function availableInvoices() {
+  return _.reduce(invoices, function (sum, patientInvoices, patientKey) {
+    // sum for this patient
+    return sum + patientInvoices.length;
+  }, 0);
 }
 
 function registerPatient() {
@@ -194,7 +265,7 @@ function registerPatient() {
   }
 
   // This is presumptious but EH
-  patient.pid = 'CLQ'.concat(index + 1);
+  patient.pid = PROJECT_CODE.concat(index + 1);
   registeredPatients.push(patient);
   // currentDate.add(1, 'day');
 

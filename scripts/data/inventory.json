@@ -537,7 +537,7 @@
 			"uuid": "48d65273-1cfb-429f-a0f7-32fae2a1eead",
 			"code": "100052",
 			"text": "fer sulphate 200 mg",
-			"price": 0.0000,
+			"price": 0.0240,
 			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
 			"unit_id": 2,
 			"consumable": 1
@@ -1383,7 +1383,7 @@
 			"uuid": "e698a6e4-8333-4b48-8f77-f44cd88e2714",
 			"code": "100080",
 			"text": "nortriptyline 25 mg25 mg",
-			"price": 0.0000,
+			"price": 0.0300,
 			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
 			"unit_id": 2,
 			"consumable": 1
