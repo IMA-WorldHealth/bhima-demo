@@ -93,9 +93,9 @@ function buildDay() {
   /**
    * Calculate Tasks
    */
-  var numberOfPatients = _.random(1, 1);
-  var numberOfInvoices = _.random(1, 1);
-  var numberOfPayments = _.random(1, 1);
+  var numberOfPatients = _.random(1, 2);
+  var numberOfInvoices = _.random(1, 3);
+  var numberOfPayments = _.random(1, 2);
   // var numberOfPatients = _.random(1, 1);
   // var numberOfInvoices = _.random(1, 1);
   // var numberOfPayments = _.random(1, 1);
@@ -107,11 +107,6 @@ function buildDay() {
   }
   // TODO ADD REPORTS + POSTING + TRANSFERS TO TASKS
   // the journal is posted to the general ledger at the end of every day
-
-  // weekly reports are compiled at the end of the last work day
-  if (IS_LAST_WORK_DAY) {
-
-  }
 
   console.log('-> Registering', String(numberOfPatients).bold.blue, 'patients');
   console.log('-> Invoicing', String(numberOfInvoices).bold.blue, 'patients');
@@ -139,6 +134,11 @@ function buildDay() {
   // tranfer aux -> primary every day
   if (numberOfPayments) {
     dailyTasks.push(transferCash);
+  }
+
+  // weekly reports are compiled at the end of the last work day
+  if (IS_LAST_WORK_DAY) {
+    dailyTasks.push(reportCashflow);
   }
 
   /**
@@ -300,4 +300,10 @@ function registerPatient() {
   // currentDate.add(1, 'day');
 
   return lib.protractor('patientRegistration', {patient : patient});
+}
+
+function reportCashflow() {
+
+  // Pass if this should be a weekly or monthly report
+  return lib.protractor('reportCashflow', {details : { reportDate : today.format('LL') }});
 }
