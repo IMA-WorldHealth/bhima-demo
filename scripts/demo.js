@@ -50,6 +50,7 @@ queue.add(login)
   .then(function () {
     buildDay();
   });
+// postAllRecords();
 // transferCash();
 // queue.add(registerPatient);
 // queue.add(invoicePatient);
@@ -135,6 +136,9 @@ function buildDay() {
   if (numberOfPayments) {
     dailyTasks.push(transferCash);
   }
+
+  // post transactions
+  dailyTasks.push(postAllRecords);
 
   // weekly reports are compiled at the end of the last work day
   if (IS_LAST_WORK_DAY) {
@@ -237,9 +241,11 @@ function transferCash() {
   var totalPaidToday = _.reduce(dailyCashMovement, function (sum, next) {
     return sum + next.cost;
   }, 0);
+  totalPaidToday = _.round(totalPaidToday, 2);
   var records = {
     cashBoxAmount : totalPaidToday
   };
+
 
   console.log('TOTAL TO TRANSFER FROM CASH WINDOW'.bold.cyan);
   console.log(records.cashBoxAmount);
@@ -255,7 +261,7 @@ function payInvoice() {
   console.log(`${JSON.stringify(invoices[targetPatient])}`.bold.cyan);
 
   // always take the first bill that the patient was billed
-  var invoice = invoices[targetPatient][0];
+  var invoice = invoices[targetPatient][invoices[targetPatient].length - 1];
 
   console.log('INVOICE TO BE PAYED'.bold.cyan);
   console.log(JSON.stringify(invoice).bold.cyan);
@@ -263,7 +269,7 @@ function payInvoice() {
   var payFullInvoice = true;
 
   // if payment was made in full
-  invoices[targetPatient].shift();
+  invoices[targetPatient].pop();
 
   console.log('After payment:'.bold.cyan);
   console.log(`${JSON.stringify(invoices[targetPatient])}`.bold.cyan);
@@ -306,4 +312,9 @@ function reportCashflow() {
 
   // Pass if this should be a weekly or monthly report
   return lib.protractor('reportCashflow', {details : { reportDate : today.format('LL') }});
+}
+
+function postAllRecords() {
+
+  return lib.protractor('postJournal');
 }

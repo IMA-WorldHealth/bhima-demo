@@ -35,7 +35,6 @@ echo
 echo "4. Building initial database"
 mysql -u $DB_USER -p$DB_PASS $DB_NAME < data/system.sql
 mysql -u $DB_USER -p$DB_PASS $DB_NAME < data/demo_hospital.sql
-
 echo
 
 echo "5. Import accounts, inventory and debtor groups"

@@ -12,6 +12,7 @@ INSERT INTO `sector` VALUES (HUID('0404e9ea-ebd6-4f20-b1f8-6dc9f9313450'),'Tshik
 INSERT INTO `village` VALUES (HUID('1f162a10-9f67-4788-9eff-c1fea42fcc9b'),'KELE2',HUID('0404e9ea-ebd6-4f20-b1f8-6dc9f9313450')), (HUID('dbe330b6-5cdf-4830-8c30-dc00eccd1a22'), 'Test Hook Village',HUID('dbe330b6-5cdf-4830-8c30-dc00eccd1a22'));
 
 -- Enterprise
+-- TODO Gain and loss accounts currently go into gain/ loss on exchange
 INSERT INTO `enterprise` VALUES (1,'Demo Hospital','ESE','243 81 00 00 000','info@enterprise.org',HUID('1f162a10-9f67-4788-9eff-c1fea42fcc9b'),NULL,2,NULL, NULL, NULL);
 
 -- Project

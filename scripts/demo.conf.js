@@ -22,7 +22,8 @@ const config = {
     patientInvoice : ['actions/invoicePatient.spec.js'],
     invoicePayment : ['actions/payInvoice.spec.js'],
     cashTransfer : ['actions/cashTransfer.spec.js'],
-    reportCashflow : ['actions/reportCashflow.spec.js']
+    reportCashflow : ['actions/reportCashflow.spec.js'],
+    postJournal : ['actions/posting.spec.js']
   },
 
   framework : 'mocha',
