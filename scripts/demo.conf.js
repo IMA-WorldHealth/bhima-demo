@@ -27,10 +27,10 @@ const config = {
   },
 
   framework : 'mocha',
-  baseUrl : 'http://localhost:8080/',
+  baseUrl : 'http://localhost:7000/',
 
   mochaOpts : {
-    timeout : 1000000
+    timeout : 10000000
   },
 
   // default browsers to run

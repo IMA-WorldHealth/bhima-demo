@@ -129,15 +129,6 @@
 			"consumable": 1
 		},
 		{
-			"uuid": "0f00aad9-4215-4636-b760-05fe9b79584e",
-			"code": "100027",
-			"text": "chlorpheniramine 4 mg",
-			"price": 0.0035,
-			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
-			"unit_id": 2,
-			"consumable": 1
-		},
-		{
 			"uuid": "1242e12c-88ff-405c-a4b9-ea7eda0e9f77",
 			"code": "100076",
 			"text": "niclosamide500 mg",
@@ -534,15 +525,6 @@
 			"consumable": 1
 		},
 		{
-			"uuid": "48d65273-1cfb-429f-a0f7-32fae2a1eead",
-			"code": "100052",
-			"text": "fer sulphate 200 mg",
-			"price": 0.0240,
-			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
-			"unit_id": 2,
-			"consumable": 1
-		},
-		{
 			"uuid": "49de2c11-74ae-4390-8256-c3cc74509085",
 			"code": "100124",
 			"text": "Acide nalidixique 500mg tab",
@@ -621,15 +603,6 @@
 			"price": 0.0100,
 			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
 			"unit_id": 2,
-			"consumable": 1
-		},
-		{
-			"uuid": "53c976b3-b474-4de8-a3f9-29b57bee4a6e",
-			"code": "100143",
-			"text": "Sachet de medicaments,10*8cm sch bte de 500 unités",
-			"price": 0.0068,
-			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
-			"unit_id": 14,
 			"consumable": 1
 		},
 		{
@@ -885,15 +858,6 @@
 			"consumable": 1
 		},
 		{
-			"uuid": "9a4841e7-368b-4387-b234-10ca004b7c56",
-			"code": "100127",
-			"text": "Magnesium Trisilicate + Aluminium Hydroxyde, 250+120mg, tab",
-			"price": 0.0058,
-			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
-			"unit_id": 15,
-			"consumable": 1
-		},
-		{
 			"uuid": "9c125b5a-e708-4bc0-8606-b58673a62f2e",
 			"code": "00010001",
 			"text": "ACT 100mg/270mg adulte",
@@ -952,24 +916,6 @@
 			"code": "100053",
 			"text": "furosemide 40 mg tab",
 			"price": 0.0100,
-			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
-			"unit_id": 2,
-			"consumable": 1
-		},
-		{
-			"uuid": "a28de551-3d51-4c3a-b678-c0b75e608bc4",
-			"code": "100144",
-			"text": "Sachet medicaments 6*8 cm bte de 500 unités",
-			"price": 0.0065,
-			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
-			"unit_id": 14,
-			"consumable": 1
-		},
-		{
-			"uuid": "a2d7c691-3df1-4f72-9400-599fb3807ef2",
-			"code": "100051",
-			"text": "Fer + acide folique200 mg+0.25 mg",
-			"price": 0.0014,
 			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
 			"unit_id": 2,
 			"consumable": 1
@@ -1375,15 +1321,6 @@
 			"code": "100035",
 			"text": "co trimoxazole 400/80mg tab",
 			"price": 0.0200,
-			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
-			"unit_id": 2,
-			"consumable": 1
-		},
-		{
-			"uuid": "e698a6e4-8333-4b48-8f77-f44cd88e2714",
-			"code": "100080",
-			"text": "nortriptyline 25 mg25 mg",
-			"price": 0.0300,
 			"group_uuid": "d66a0518-67ce-475c-b124-0bb78a65533f",
 			"unit_id": 2,
 			"consumable": 1

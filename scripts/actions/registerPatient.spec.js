@@ -30,11 +30,7 @@ describe.only('Patient Registration', () => {
 
   const TOTAL_ITEMS = 2;
 
-  let inc = 0;
-  let date = new Date;
-
   let item = patient;
-  let index = 0;
 
   // patients.forEach((item, index) => {
 
@@ -46,7 +42,7 @@ describe.only('Patient Registration', () => {
 
 
       // hospital number and yob
-      item.hospital_no = item.hospital_no && item.hospital_no !== '0' ? item.hospital_no : 'D00' + inc++;
+      item.hospital_no = item.hospital_no;
       FU.input('PatientRegCtrl.medical.hospital_no', item.hospital_no);
       FU.input('PatientRegCtrl.yob', item.yob);
 
@@ -72,7 +68,9 @@ describe.only('Patient Registration', () => {
       // submit the patient registration form
       FU.buttons.submit();
 
+      expect(element(by.css('[data-action="close"]')).isPresent()).to.eventually.equal(true);
       $('[data-action="close"]').click();
+      // done();
     });
 
   // });

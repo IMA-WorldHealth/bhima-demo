@@ -20,6 +20,7 @@ module.exports = function (id, debug) {
 }
 
 function execProtractor(suite, params) {
+  console.log('exec', suite);
   var start = new moment();
   var deferred = Promise.defer();
   var command = `${protractorPath} ${configPath} --seleniumSessionId=${seleniumId} --suite ${suite} `;
@@ -59,7 +60,7 @@ function execProtractor(suite, params) {
 
 function setTime(dateObject) {
   var datestring = dateObject.format('"MMM DD Y HH:mm:ss"');
-  console.log(`Setting the time ${datestring}`.dim.gray);
+  console.log(`Setting the time ${datestring}`.bold.cyan);
   exec('date -s '.concat(datestring), function (error) {
     if (error) {
       console.error('Unable to set time, are you sudo?'.bold.red);

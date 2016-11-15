@@ -74,6 +74,7 @@ describe.only('Pay Invoice', () => {
   // FU.exists(by.id('receipt-confirm-created'), true);
 
   // dismiss the modal
+  expect(element(by.css('[data-action="close"]')).isPresent()).to.eventually.equal(true);
   $('[data-action="close"]').click();
   });
 });

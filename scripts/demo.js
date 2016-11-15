@@ -26,7 +26,7 @@ var Queue = require('promise-queue');
 var lib = require('./lib')(seleniumSessionId, SILENT_DEBUG);
 
 var queue = new Queue(1, Infinity);
-let fiscalYearStart = '2015-01-01 09:00';
+let fiscalYearStart = '2015-01-03 09:00';
 let today = new moment(fiscalYearStart);
 
 var patientsList = require('./data/patients');
@@ -37,6 +37,7 @@ var inventory = require('./data/inventory').rows;
 // paid from the bottom up
 var invoices = {};
 var dailyCashMovement = [];
+var totalCashflowReports = 0;
 
 var registeredPatients = [];
 var PROJECT_CODE = 'HSP';
@@ -46,10 +47,29 @@ var PROJECT_CODE = 'HSP';
 
 var count = 0;
 
-queue.add(login)
-  .then(function () {
-    buildDay();
-  });
+ queue.add(login)
+   .then(function () {
+     buildDay();
+   });
+
+// registerPatient()
+//   .then(function () {
+//     return invoicePatient();
+//   })
+//   .then(function () {
+//     return payInvoice();
+//   })
+//   .then(function () {
+//     return transferCash();
+//   })
+//   .then(function () {
+//     return postAllRecords();
+//   })
+//   .then(function () {
+//     return reportCashflow();
+//   });
+
+
 // postAllRecords();
 // transferCash();
 // queue.add(registerPatient);
@@ -143,7 +163,10 @@ function buildDay() {
   // weekly reports are compiled at the end of the last work day
   if (IS_LAST_WORK_DAY) {
     dailyTasks.push(reportCashflow);
+    dailyTasks.push(timeout);
   }
+
+  dailyTasks.push(nextDay);
 
   /**
    * Calculate Time Interval Sets
@@ -157,16 +180,20 @@ function buildDay() {
   var minimumIncrement = 20;
   var maximumIncrement = Math.round(480 / numberOfActions);
 
-  for (var i = 0; i < dailyTasks.length - 1; i++) {
+  for (var i = 0; i < dailyTasks.length; i++) {
+    if (dailyTasks[i - 1] === reportCashflow) {
+      console.log('task was cashflow, not setting time'.bold.green);
+    } else {
+      queue.add(setTime);
+    }
     queue.add(dailyTasks[i]);
-    queue.add(setTime);
   };
 
   // add the final task
-  queue.add(dailyTasks[dailyTasks.length - 1])
-    .then(function () {
-      nextDay();
-    });
+  // queue.add(dailyTasks[dailyTasks.length - 1])
+    // .then(function () {
+      // nextDay();
+    // });
 
 
   function setTime() {
@@ -177,7 +204,6 @@ function buildDay() {
 
   function nextDay() {
     console.log('_____________________________________'.bold.cyan);
-    deferred.resolve();
 
     // reset daily tracking
     dailyCashMovement.length = 0;
@@ -213,9 +239,14 @@ function invoicePatient() {
   invoiceDetails.inventoryItems = _.sampleSize(inventory, _.random(1, 5));
 
   invoiceDetails.inventoryItems = _.map(invoiceDetails.inventoryItems, function (item) {
+
+    // ensure that we can pay this bill hack
+    // if (item.price < 0.01) {
+      // item.price = 0.01;
+    // }
     item.quantity = _.random(1, 5);
     return item;
-  });
+  })
 
   // TODO this does not factor in billing services or subsides
   var totalCost = _.reduce(invoiceDetails.inventoryItems, function(sum, next) {
@@ -224,7 +255,7 @@ function invoicePatient() {
 
   totalCost = _.round(totalCost, 2);
 
-  console.log(`Total cost of invoice ${totalCost}`.bold.cyan);
+  // console.log(`Total cost of invoice ${totalCost}`.bold.cyan);
 
   invoices[selectPatient.pid] = invoices[selectPatient.pid] || [];
   invoices[selectPatient.pid].push({
@@ -247,8 +278,8 @@ function transferCash() {
   };
 
 
-  console.log('TOTAL TO TRANSFER FROM CASH WINDOW'.bold.cyan);
-  console.log(records.cashBoxAmount);
+  // console.log('TOTAL TO TRANSFER FROM CASH WINDOW'.bold.cyan);
+  // console.log(records.cashBoxAmount);
 
   return lib.protractor('cashTransfer', { cashRecords : records });
 }
@@ -257,22 +288,22 @@ function payInvoice() {
   var availablePatients = _.keys(invoices);
   var targetPatient = _.sample(availablePatients);
 
-  console.log(`Paying invoices for ${targetPatient}`.bold.cyan);
-  console.log(`${JSON.stringify(invoices[targetPatient])}`.bold.cyan);
+  // console.log(`Paying invoices for ${targetPatient}`.bold.cyan);
+  // console.log(`${JSON.stringify(invoices[targetPatient])}`.bold.cyan);
 
   // always take the first bill that the patient was billed
   var invoice = invoices[targetPatient][invoices[targetPatient].length - 1];
 
-  console.log('INVOICE TO BE PAYED'.bold.cyan);
-  console.log(JSON.stringify(invoice).bold.cyan);
+  // console.log('INVOICE TO BE PAYED'.bold.cyan);
+  // console.log(JSON.stringify(invoice).bold.cyan);
 
   var payFullInvoice = true;
 
   // if payment was made in full
   invoices[targetPatient].pop();
 
-  console.log('After payment:'.bold.cyan);
-  console.log(`${JSON.stringify(invoices[targetPatient])}`.bold.cyan);
+  // console.log('After payment:'.bold.cyan);
+  // console.log(`${JSON.stringify(invoices[targetPatient])}`.bold.cyan);
 
   dailyCashMovement.push(invoice);
 
@@ -296,7 +327,7 @@ function registerPatient() {
   var index = registeredPatients.length;
   var patient = patientsList[index];
 
-  if (!patient.hospital_no) {
+  if (!patient.hospital_no || patient.hospital_no === "0") {
     patient.hospital_no = 'TMP'.concat(index);
   }
 
@@ -308,10 +339,22 @@ function registerPatient() {
   return lib.protractor('patientRegistration', {patient : patient});
 }
 
+function timeout() {
+  var deferred = Promise.defer();
+
+  console.log('Timeout 5s'.bold.red);
+  // Wait 2 seconds for the submission to complete - this is a hack and there
+  // should be visiaul confirmation
+  setTimeout(function () { console.log('Timeout resolved'.bold.red); deferred.resolve() }, 5000);
+  return deferred.promise;
+
+}
+
 function reportCashflow() {
+  totalCashflowReports += 1;
 
   // Pass if this should be a weekly or monthly report
-  return lib.protractor('reportCashflow', {details : { reportDate : today.format('LL') }});
+  return lib.protractor('reportCashflow', {details : { reportDate : today.format('LL'), totalReports : totalCashflowReports }});
 }
 
 function postAllRecords() {

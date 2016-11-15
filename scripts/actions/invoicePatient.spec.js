@@ -68,6 +68,7 @@ describe.only('Invoice Patient', () => {
     browser.ignoreSynchronization = false;
     page.submit();
 
+    expect(element(by.css('[data-action="close"]')).isPresent()).to.eventually.equal(true);
     page.reset();
   });
 });
