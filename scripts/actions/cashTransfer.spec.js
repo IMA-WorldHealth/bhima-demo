@@ -100,7 +100,12 @@ describe.only('Transfer Cash', () => {
     page.submit();
 
     // expect a successful notification
-    components.notification.hasSuccess();
+    // components.notification.hasSuccess();
+    // make sure a receipt was opened
+    FU.exists(by.id('receipt-confirm-created'), true);
+
+    // close the modal
+    $('[data-method="close"]').click();
   });
 });
 

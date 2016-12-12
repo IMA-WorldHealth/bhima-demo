@@ -44,7 +44,7 @@ describe.only('Patient Registration', () => {
       // hospital number and yob
       item.hospital_no = item.hospital_no;
       FU.input('PatientRegCtrl.medical.hospital_no', item.hospital_no);
-      FU.input('PatientRegCtrl.yob', item.yob);
+      FU.input('PatientRegCtrl.medical.dob', '01-01-'.concat(item.yob));
 
 
       // set the gender of the patient

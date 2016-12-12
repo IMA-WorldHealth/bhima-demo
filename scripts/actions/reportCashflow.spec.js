@@ -36,10 +36,7 @@ describe.only('Generate Cashflow', () => {
 
     FU.select('ReportConfigCtrl.cashbox', 'Hospital Primary Cashbox $');
 
-    browser.pause();
     FU.buttons.submit();
-
-    browser.pause();
     GU.expectRowCount('report-grid', details.totalReports);
   });
 
