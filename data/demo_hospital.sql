@@ -45,6 +45,20 @@ INSERT INTO `permission` (unit_id, user_id) VALUES
 (144,1),
 (18, 1);
 
+-- @TODO Temporary - remove when repository is updated to correctly define voucher types
+INSERT INTO `transaction_type` (`id`, `text`, `description`, `type`, `prefix`, `fixed`) VALUES
+  (1, 'VOUCHERS.SIMPLE.GENERIC_INCOME', 'Generic income transaction type', 'income', 'REC. GEN', 1),
+  (2, 'VOUCHERS.SIMPLE.CASH_PAYMENT', 'Cash payment transaction type', 'income', 'CASH', 1),
+  (3, 'VOUCHERS.SIMPLE.CONVENTION_PAYMENT', 'Convention payment transaction type', 'income', 'CONV', 1),
+  (4, 'VOUCHERS.SIMPLE.SUPPORT_INCOME', 'Support transaction type', 'income', 'PEC', 1),
+  (5, 'VOUCHERS.SIMPLE.TRANSFER', 'Transfer transaction type', 'income', 'TRANSF', 1),
+  (6, 'VOUCHERS.SIMPLE.GENERIC_EXPENSE', 'Generic expense transaction type', 'expense', 'DEP. GEN', 1),
+  (7, 'VOUCHERS.SIMPLE.SALARY_PAYMENT', 'Salary payment transaction type', 'expense', 'SALAIRE', 1),
+  (8, 'VOUCHERS.SIMPLE.CASH_RETURN', 'Cash return transaction type', 'expense', 'PAYBACK', 1),
+  (9, 'VOUCHERS.SIMPLE.PURCHASES', 'Purchase transaction type', 'expense', 'ACHAT', 1),
+  (10,'VOUCHERS.SIMPLE.CREDIT_NOTE', 'Credit note transaction type', 'other', 'CREDIT NOTE', 1);
+
+
 INSERT INTO `exchange_rate` VALUES
   (1,1,1,900.0000, DATE('2016-01-01')),
   (2,1,1,930.0000, NOW());
@@ -69,8 +83,3 @@ INSERT INTO `service` VALUES (1, 1, 'Administration', NULL, NULL), (2, 1, 'Pedia
   -- Fiscal Year 2017
   SET @fiscalYear2017 = 0;
   CALL CreateFiscalYear(1, @fiscalYear2016, 1, 'Test Fiscal Year 2017', 12, DATE('2017-01-01'), DATE('2017-12-31'), 'Note for 2017', @fiscalYear2017);
-
- -- core BHIMA reports 
- INSERT INTO `report` (`id`, `report_key`, `title_key`) VALUES 
-  (1, 'cashflow', 'TREE.CASHFLOW'), 
-  (2, 'accounts_chart', 'REPORT.CHART_OF_ACCOUNTS');

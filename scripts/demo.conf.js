@@ -18,6 +18,7 @@ const config = {
 
   suites : {
     login : ['actions/login.spec.js'],
+    refresh : ['actions/refresh.spec.js'],
     patientRegistration : ['actions/registerPatient.spec.js'],
     patientInvoice : ['actions/invoicePatient.spec.js'],
     invoicePayment : ['actions/payInvoice.spec.js'],

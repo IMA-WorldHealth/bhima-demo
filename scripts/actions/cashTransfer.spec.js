@@ -30,8 +30,11 @@ describe.only('Transfer Cash', () => {
     helpers.navigate('#/cash/1');
 
     // click the transfer button
-    const transferBtn = element(by.css('[data-perform-transfer]'));
-    transferBtn.click();
+    // const transferBtn = element(by.css('[data-perform-transfer]'));
+    // transferBtn.click();
+
+    $('[data-action="open-tools"]').click();
+    $('[data-action="transfer"]').click();
 
     // choose USD as transfer currency
     components.currencySelect.set(2, 'transfer-currency-select');
@@ -57,8 +60,8 @@ describe.only('Transfer Cash', () => {
       rows : [
 
         // TODO As the previous transfer has just been made this will be the 0th index - this shouldn't be left to chance
-        { account : 'Virement des fonds Caisse Auxiliaire - Caisse Principale USD', debit: cashRecords.cashBoxAmount, credit: 0, reference : { type : 'voucher', index : 0}},
-        { account : 'Caisse Principale USD', debit: 0, credit: cashRecords.cashBoxAmount, reference : { type : 'voucher', index : 0 }},
+        { account : 'Virement des fonds Caisse Auxiliaire - Caisse Principale USD', debit: 0, credit: cashRecords.cashBoxAmount, reference : { type : 'voucher', index : 0}},
+        { account : 'Caisse Principale USD', debit: cashRecords.cashBoxAmount, credit: 0, reference : { type : 'voucher', index : 0 }},
       ]
     };
 
@@ -93,7 +96,7 @@ describe.only('Transfer Cash', () => {
      * (e.g. cash payment Id is 1)
      * @see client/src/js/services/VoucherService.js
      */
-    page.transferType(5)
+    page.transactionType("Transfert d'argent");
 
     // browser.ignoreSynchronization = false;
     // submit the page

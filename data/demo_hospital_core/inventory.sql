@@ -54,7 +54,7 @@ INSERT INTO `inventory_group` (`uuid`, `name`, `code`, `sales_account`, `cogs_ac
 -- Contenu de la table `inventory`
 --
 
-INSERT INTO `inventory` (`enterprise_id`, `uuid`, `code`, `text`, `price`, `group_uuid`, `unit_id`, `unit_weight`, `unit_volume`, `stock`, `stock_max`, `stock_min`, `type_id`, `consumable`, `origin_stamp`) VALUES
+INSERT INTO `inventory` (`enterprise_id`, `uuid`, `code`, `text`, `price`, `group_uuid`, `unit_id`, `unit_weight`, `unit_volume`, `stock`, `stock_max`, `stock_min`, `type_id`, `consumable`, `created_at`) VALUES
 (1, 0x00efb27b0d504561bf1394337c069c2a, '110001', 'ampicilline susp \'100 ml125mg/5ml', '0.6600', 0xd66a051867ce475cb1240bb78a65533f, 2, 0, 0, 1, 100000000, 0, 1, 1, '2016-10-23 09:35:08'),
 (1, 0x00f2e9564a754dc882dd1e8eca56fce7, '100029', 'cimetidine , tagamet,pintapro 200 mg', '0.0500', 0xd66a051867ce475cb1240bb78a65533f, 2, 0, 0, 1, 100000000, 0, 1, 1, '2016-10-23 09:35:08'),
 (1, 0x0105ea85dfde4d48a434355b43a363fb, '100007', 'amoxycilline 250 mg', '0.0400', 0xd66a051867ce475cb1240bb78a65533f, 2, 0, 0, 1, 100000000, 0, 1, 1, '2016-10-23 09:35:08'),

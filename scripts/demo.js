@@ -26,7 +26,7 @@ var Queue = require('promise-queue');
 var lib = require('./lib')(seleniumSessionId, SILENT_DEBUG);
 
 var queue = new Queue(1, Infinity);
-let fiscalYearStart = '2015-01-03 09:00';
+let fiscalYearStart = '2015-01-01 09:00';
 let today = new moment(fiscalYearStart);
 
 var patientsList = require('./data/patients');
@@ -166,6 +166,10 @@ function buildDay() {
     dailyTasks.push(timeout);
   }
 
+  // refresh the browser at the end of every day to simulate shutting down machine
+  // this should be removed to find memory leaks
+  dailyTasks.push(refreshPage);
+
   dailyTasks.push(nextDay);
 
   /**
@@ -292,7 +296,8 @@ function payInvoice() {
   // console.log(`${JSON.stringify(invoices[targetPatient])}`.bold.cyan);
 
   // always take the first bill that the patient was billed
-  var invoice = invoices[targetPatient][invoices[targetPatient].length - 1];
+  // var invoice = invoices[targetPatient][invoices[targetPatient].length - 1];
+  var invoice = invoices[targetPatient].shift();
 
   // console.log('INVOICE TO BE PAYED'.bold.cyan);
   // console.log(JSON.stringify(invoice).bold.cyan);
@@ -300,7 +305,7 @@ function payInvoice() {
   var payFullInvoice = true;
 
   // if payment was made in full
-  invoices[targetPatient].pop();
+  // invoices[targetPatient].pop();
 
   // console.log('After payment:'.bold.cyan);
   // console.log(`${JSON.stringify(invoices[targetPatient])}`.bold.cyan);
@@ -332,7 +337,7 @@ function registerPatient() {
   }
 
   // This is presumptious but EH
-  patient.pid = PROJECT_CODE.concat(index + 1);
+  patient.pid = `PA.${PROJECT_CODE}.${index + 1}`;
   registeredPatients.push(patient);
   // currentDate.add(1, 'day');
 
@@ -348,6 +353,11 @@ function timeout() {
   setTimeout(function () { console.log('Timeout resolved'.bold.red); deferred.resolve() }, 5000);
   return deferred.promise;
 
+}
+
+function refreshPage() {
+  console.log('Refreshing browser page'.bold.yellow);
+  return lib.protractor('refresh', {});
 }
 
 function reportCashflow() {

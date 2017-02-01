@@ -30,7 +30,7 @@ describe.only('Generate Cashflow', () => {
     FU.buttons.create();
 
     FU.input('ReportConfigCtrl.label', details.reportDate.concat(' Weekly USD Cash Movement'));
-    element(by.css('[data-date-range="2"]')).click();
+    element(by.css('[data-date-range="week"]')).click();
 
     FU.radio('ReportConfigCtrl.weekly', 0);
 

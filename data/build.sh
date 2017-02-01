@@ -32,15 +32,17 @@ mysql -u $DB_USER -p$DB_PASS $DB_NAME < latest/server/models/procedures.sql
 
 echo
 
-echo "4. Building initial database"
-mysql -u $DB_USER -p$DB_PASS $DB_NAME < data/system.sql
+echo "4. Building system database"
+mysql -u $DB_USER -p$DB_PASS $DB_NAME < latest/server/models/test/icd10.sql
+mysql -u $DB_USER -p$DB_PASS $DB_NAME < latest/server/models/bhima.sql
+
 mysql -u $DB_USER -p$DB_PASS $DB_NAME < data/demo_hospital.sql
 echo
 
 echo "5. Import accounts, inventory and debtor groups"
-mysql -u $DB_USER -p$DB_PASS $DB_NAME < data/core/account.sql
-mysql -u $DB_USER -p$DB_PASS $DB_NAME < data/core/inventory.sql
-mysql -u $DB_USER -p$DB_PASS $DB_NAME < data/core/debtor_group.sql
+mysql -u $DB_USER -p$DB_PASS $DB_NAME < data/demo_hospital_core/account.sql
+mysql -u $DB_USER -p$DB_PASS $DB_NAME < data/demo_hospital_core/inventory.sql
+mysql -u $DB_USER -p$DB_PASS $DB_NAME < data/demo_hospital_core/debtor_group.sql
 
 echo 
 
