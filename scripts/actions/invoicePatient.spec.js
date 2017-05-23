@@ -24,13 +24,12 @@ helpers.configure(chai);
 describe.only('Invoice Patient', () => {
   'use strict';
 
-  const invoice_path = '#/invoices/patient';
+  const invoice_path = '#!/invoices/patient';
 
   var invoiceDetails = JSON.parse(browser.params.invoiceDetails);
 
   it('Invoices a patient', function () {
     helpers.navigate(invoice_path);
-    // browser.get('#/invoices/patient');
 
     var data = invoiceDetails.inventoryItems;
 
@@ -52,6 +51,8 @@ describe.only('Invoice Patient', () => {
         'PatientInvoiceCtrl.Invoice.details.description',
         `Invoicing patient ${pid}`
       );
+
+    FU.select('PatientInvoiceCtrl.Invoice.details.service_id', 'Administration');
 
     browser.ignoreSynchronization = true;
     page.addRows(data.length - 1);

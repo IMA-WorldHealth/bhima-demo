@@ -32,7 +32,6 @@ let today = new moment(fiscalYearStart);
 var patientsList = require('./data/patients');
 var inventory = require('./data/inventory').rows;
 
-
 // map of patient ID to invoices, invoices are in order of creation and should be
 // paid from the bottom up
 var invoices = {};
@@ -349,7 +348,7 @@ function timeout() {
 
   console.log('Timeout 5s'.bold.red);
   // Wait 2 seconds for the submission to complete - this is a hack and there
-  // should be visiaul confirmation
+  // should be visual confirmation
   setTimeout(function () { console.log('Timeout resolved'.bold.red); deferred.resolve() }, 5000);
   return deferred.promise;
 

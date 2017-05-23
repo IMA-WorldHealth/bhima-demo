@@ -1,7 +1,7 @@
 # bhima-demo
 Demo hospital build for the BHIMA HIS. Includes build scripts as well as standardised test build snapshots.
 
-##Latest Production Build 
+## Latest Production Build 
 
 ```./latest```
 This folder will hold the latest production build of BHIMA for the hospital 
@@ -17,12 +17,10 @@ npm run build
 ```
 
 # Steps to build 
-*(Not yet stable - as of 31/01/2017)*
 
 ```sh
 # 1. build the demo hospitals database, this will the core bhima.sql scripts 
 # found in the `/latest` repository and build the example demo hospital
-cd /bhima-demo/
 ./data/build.sh
 
 # 2. make sure that the BHIMA server is running and using the correct environment 
@@ -53,13 +51,10 @@ cd /bhima-demo/scripts
 ./attachSession.js
 
 # 5. run the demo script - this will begin the demo hospital emulation, attempting 
-# connect to a BHIMA server running on port 7000, expecting a clean database build
-
-# ./demo.js
+# connect to a BHIMA server running on port 7000, expecting a clean database build.
 
 # note to include emulating change over time, the demo must be run as `sudo` to 
 # have access to updating the system time, this should only be done in a secure 
 # non-production environement (ideally a demo sandbox) 
 sudo ./demo.js
-
 ```

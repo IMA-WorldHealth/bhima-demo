@@ -1,5 +1,6 @@
 /* jshint expr: true */
 /* global element, by, browser */
+'use strict';
 
 const path = require('path');
 const _root = '../../latest/test/end-to-end/shared/';
@@ -19,6 +20,22 @@ const components = require(root('components'));
 const helpers = require(root('helpers'));
 
 helpers.configure(chai);
+
+// TODO(@jniles) - make this a utility?
+function getRandomDateStringFromYear(year) {
+  // get the current date for reference
+  var today = new Date();
+
+  // randomize date
+  let day = String(_.random(0, 28) || 1);
+  let month = String(_.random(0, 12) || 1);
+
+  // append
+  if (day.length === 1) { day = `0${day}`; }
+  if (month.length === 1) { month = `0${month}`; }
+
+  return `${day}/${day}/${year}`;
+}
 
 describe.only('Patient Registration', () => {
   'use strict';
@@ -44,8 +61,8 @@ describe.only('Patient Registration', () => {
       // hospital number and yob
       item.hospital_no = item.hospital_no;
       FU.input('PatientRegCtrl.medical.hospital_no', item.hospital_no);
-      FU.input('PatientRegCtrl.medical.dob', '01-01-'.concat(item.yob));
 
+      FU.input('PatientRegCtrl.medical.dob', getRandomDateStringFromYear(item.yob));
 
       // set the gender of the patient
       if (item.sex === 'M') {

@@ -5,7 +5,6 @@ function root(key) {
   return path.join(__dirname, _root, key);
 }
 
-
 const chai = require('chai');
 const expect = chai.expect;
 
@@ -21,9 +20,8 @@ helpers.configure(chai);
 describe.only('Pay Invoice', () => {
   'use strict';
 
-
   it('Makes a payment against an invioce', function () {
-  helpers.navigate('#/cash/1');
+  helpers.navigate('#!/cash/1');
   var CURRENCY_USD = 2;
   var currency = CURRENCY_USD;
   // Pass this in
