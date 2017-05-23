@@ -15,7 +15,7 @@ if (USE_CONFIG) {
 }
 
 if (!seleniumSessionId) {
-  throw new Error('no selenium session ID passed, terminating.');
+  throw new Error('Mo selenium session ID passed, terminating.');
 }
 
 var _ = require('lodash');
