@@ -24,7 +24,9 @@ const config = {
     invoicePayment : ['actions/payInvoice.spec.js'],
     cashTransfer : ['actions/cashTransfer.spec.js'],
     reportCashflow : ['actions/reportCashflow.spec.js'],
-    postJournal : ['actions/posting.spec.js']
+    postJournal : ['actions/posting.spec.js'],
+    selectTransactionView : ['actions/selectTransactionView.spec.js'],
+    payExpenses : ['actions/payExpenses.spec.js']
   },
 
   framework : 'mocha',

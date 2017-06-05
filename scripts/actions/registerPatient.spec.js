@@ -34,7 +34,7 @@ function getRandomDateStringFromYear(year) {
   if (day.length === 1) { day = `0${day}`; }
   if (month.length === 1) { month = `0${month}`; }
 
-  return `${day}/${day}/${year}`;
+  return `${day}/${month}/${year}`;
 }
 
 describe.only('Patient Registration', () => {

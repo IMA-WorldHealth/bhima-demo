@@ -29,7 +29,7 @@ var queue = new Queue(1, Infinity);
 let fiscalYearStart = '2015-01-01 09:00';
 let today = new moment(fiscalYearStart);
 
-var patientsList = require('./data/patients');
+var patientsList = require('./data/random_names');
 var inventory = require('./data/inventory').rows;
 
 // map of patient ID to invoices, invoices are in order of creation and should be
@@ -47,6 +47,9 @@ var PROJECT_CODE = 'HSP';
 var count = 0;
 
  queue.add(login)
+   .then(function () {
+      return queue.add(selectTransactionView);
+   })
    .then(function () {
      buildDay();
    });
@@ -78,6 +81,8 @@ var count = 0;
 var SUNDAY = 0;
 var MONDAY = 1;
 var SATURDAY = 6;
+
+
 
 function buildDay() {
   var deferred = Promise.defer();
@@ -161,7 +166,7 @@ function buildDay() {
 
   // weekly reports are compiled at the end of the last work day
   if (IS_LAST_WORK_DAY) {
-    dailyTasks.push(reportCashflow);
+    dailyTasks.push(payExpenses);
     dailyTasks.push(timeout);
   }
 
@@ -332,7 +337,7 @@ function registerPatient() {
   var patient = patientsList[index];
 
   if (!patient.hospital_no || patient.hospital_no === "0") {
-    patient.hospital_no = 'TMP'.concat(index);
+    patient.hospital_no = 'HSP'.concat(index);
   }
 
   // This is presumptious but EH
@@ -367,6 +372,13 @@ function reportCashflow() {
 }
 
 function postAllRecords() {
-
   return lib.protractor('postJournal');
+}
+
+function selectTransactionView() {
+  return lib.protractor('selectTransactionView');
+}
+
+function payExpenses() {
+  return lib.protractor('payExpenses');
 }

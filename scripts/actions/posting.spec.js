@@ -31,9 +31,14 @@ describe.only('Use the trial balance', () => {
   it('Post all rows', function () {
     helpers.navigate('#/journal');
 
+    browser.refresh();
+
     clickHeaderCell('journal-grid', 1);
     // journal.checkRow(0);
-    journal.openTrialBalanceModal();
+    //journal.openTrialBalanceModal();
+
+    $('[data-action="open-tools"]').click();
+    $('[data-method="trial"]').click();
     trialBalance.submitData();
   });
 

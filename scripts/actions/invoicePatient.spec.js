@@ -52,7 +52,7 @@ describe.only('Invoice Patient', () => {
         `Invoicing patient ${pid}`
       );
 
-    FU.select('PatientInvoiceCtrl.Invoice.details.service_id', 'Administration');
+    FU.select('PatientInvoiceCtrl.Invoice.details.service_id', selectService());
 
     browser.ignoreSynchronization = true;
     page.addRows(data.length - 1);
@@ -73,3 +73,13 @@ describe.only('Invoice Patient', () => {
     page.reset();
   });
 });
+
+function selectService() {
+  const index = _.random(0, 2);
+  const options = [
+    'Administration',
+    'Medecine Interne',
+    'Pediatrie'
+  ];
+  return options[index];
+}
