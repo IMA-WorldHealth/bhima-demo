@@ -28,13 +28,11 @@ describe.only('Invoice Patient', () => {
 
   var invoiceDetails = JSON.parse(browser.params.invoiceDetails);
 
-  it('Invoices a patient', function () {
+  it('Invoices a patient', function (done) {
     helpers.navigate(invoice_path);
+    browser.refresh();
 
     var data = invoiceDetails.inventoryItems;
-
-    console.log(data);
-    console.log(typeof data);
 
     // var item = data[Math.floor(Math.random() * data.length)];
 
@@ -71,6 +69,8 @@ describe.only('Invoice Patient', () => {
 
     expect(element(by.css('[data-action="close"]')).isPresent()).to.eventually.equal(true);
     page.reset();
+
+    done();
   });
 });
 

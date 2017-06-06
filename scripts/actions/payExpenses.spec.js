@@ -23,7 +23,7 @@ helpers.configure(chai);
 describe.only('Transfer Cash', () => {
   'use strict';
 
-  it('Pays the weeklky water bill', function () {
+  it('Pays the water bill', function () {
     helpers.navigate('#/vouchers/complex');
 
     browser.refresh();
@@ -33,7 +33,7 @@ describe.only('Transfer Cash', () => {
     const voucher = {
       date : new Date(),
       // TODO add date and account info to description
-      description : 'Weekly water bill',
+      description : 'Monthly water bill',
       rows : [
 
         // water - 60511010
@@ -98,7 +98,7 @@ describe.only('Transfer Cash', () => {
     const voucher = {
       date : new Date(),
       // TODO add date and account info to description
-      description : 'Weekly payment for electricity',
+      description : 'Monthly payment for electricity',
       rows : [
 
         // water - 60511010

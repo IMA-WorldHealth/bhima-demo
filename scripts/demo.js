@@ -41,8 +41,9 @@ var totalCashflowReports = 0;
 var registeredPatients = [];
 var PROJECT_CODE = 'HSP';
 
-// var totalPatients = 5;
-// patientsList = _.take(patientsList, totalPatients);
+const SUNDAY = 0;
+const MONDAY = 1;
+const SATURDAY = 6;
 
 var count = 0;
 
@@ -51,39 +52,110 @@ var count = 0;
       return queue.add(selectTransactionView);
    })
    .then(function () {
-     buildDay();
+     buildSparse();
    });
 
-// registerPatient()
-//   .then(function () {
-//     return invoicePatient();
-//   })
-//   .then(function () {
-//     return payInvoice();
-//   })
-//   .then(function () {
-//     return transferCash();
-//   })
-//   .then(function () {
-//     return postAllRecords();
-//   })
-//   .then(function () {
-//     return reportCashflow();
-//   });
+// designed to build a sparse data set idea for creating a realistic but minimal
+// data set that can be quickly build for testing the validity of reports
+function buildSparse() {
+  const deferred = Promise.defer();
+
+  const months = 24;
+
+  // frequency for each fiscal period (month)
+  const frequency = {
+    patients : 2,
+    invoices : 2,
+    cashPayments : 1
+  };
 
 
-// postAllRecords();
-// transferCash();
-// queue.add(registerPatient);
-// queue.add(invoicePatient);
-// queue.add(registerPatient);
+  nextMonth();
 
-var SUNDAY = 0;
-var MONDAY = 1;
-var SATURDAY = 6;
+  function nextMonth() {
+
+    console.log();
+    const title = today.format('LLLL');
+    console.log(title.bold.underline.cyan);
+    lib.setTime(today);
+
+    dailyCashMovement.length = 0;
+    dailyCashMovement = [];
 
 
+    // @hack
+    // days of the month on which to perform 3 basic actions
+    // 1. register a patient
+    // 2. register a patient, invoice a patient, pay a cash payment
+    // 3. invoice a patient
+    const periods = [
+      _.random(1, 14),
+      _.random(16,22),
+      _.random(23,27)
+    ];
 
+    // bill date will be used for
+    // 4. pay a regular recurring expense
+    const billDate = 15;
+
+    // final day will be used for
+    // 5. transfer all cash to primary cash box
+    // 6. post all months record to finalise them
+    const finalDay = today.daysInMonth();
+
+    queue.add(setDate(periods[0]));
+    queue.add(registerPatient);
+
+    queue.add(setDate(billDate));
+    queue.add(payExpenses);
+
+    queue.add(setDate(periods[1]));
+    queue.add(invoicePatient);
+    queue.add(payInvoice);
+
+    queue.add(setDate(periods[2]));
+    queue.add(invoicePatient);
+
+    queue.add(setDate(finalDay));
+    queue.add(transferCash);
+    queue.add(postAllRecords);
+
+    queue.add(incrementMonth);
+  }
+
+  function incrementMonth() {
+    today.add(1, 'month');
+    today.date(1);
+
+    // stop after two calendar years
+    if (today.year() < 2017) {
+      nextMonth();
+    } else {
+      console.log();
+      console.log('2 calendar years complete.');
+    }
+  }
+
+  function setDate(dayOfMonth) {
+
+    return () => {
+      today.date(dayOfMonth);
+      today.hour(_.random(9, 17));
+      today.minutes(_.random(1, 50));
+
+      console.log();
+      const title = today.format('LLLL');
+      console.log('Settings Time: '.concat(title.bold.underline.cyan));
+      lib.setTime(today);
+    };
+  }
+
+}
+
+
+// mocks a demo hospital operating on a daily basis, no overall goals are
+// required and random numbers are used to decide how many of each job should
+// be performed on a daily basis.
 function buildDay() {
   var deferred = Promise.defer();
 
@@ -293,6 +365,11 @@ function transferCash() {
 }
 
 function payInvoice() {
+
+  console.log();
+  console.log('paying invoice, available invoices', invoices);
+  console.log();
+
   var availablePatients = _.keys(invoices);
   var targetPatient = _.sample(availablePatients);
 
